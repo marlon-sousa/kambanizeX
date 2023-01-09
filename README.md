@@ -15,7 +15,9 @@ As Kambanize's clients are corporations unlikely to change their kamban supplier
 We are using wx python.
 At the moment, only Windows is oficially supported, though the application should run on *nix without problems.
 
-You will need python 3.7 or greater.
+You will need python 3.10.
+We strongly recomend the 64 bits version, although you can perfectly try to use python versions as low as 3.7 and vary between 32 and 64 bits.
+The only noticeable consequence of using other python versions is that perhaps wxwidgets will need to be built at installation time if there are no pre compiled binaries targetting your python version and architecture, and building wx widgets is not an easy task.  Generally, try to stick with python 3.10, 64 bits if you can. This will be easier.
 
 1. Go to the project folder.
 2. Execute venv. This will create and activate the virtual environment.
