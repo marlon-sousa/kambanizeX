@@ -5,7 +5,14 @@ from .settingsDialog import SettingsDialog
 class MainFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.render()
 
+    def render(self):
+        self.createMenus()
+        # Create the status bar
+        self.CreateStatusBar()
+
+    def createMenus(self):
         # Create the menubar
         menubar = wx.MenuBar()
 
@@ -27,8 +34,7 @@ class MainFrame(wx.Frame):
         # Set the menubar as the top-level menu
         self.SetMenuBar(menubar)
 
-        # Create the status bar
-        self.CreateStatusBar()
+        
 
         # Bind the events to their respective handlers
         self.Bind(wx.EVT_MENU, self.on_open_board, open_board_menu_item)

@@ -1,0 +1,7 @@
+### get boards
+GET https://remessaonline.kanbanize.com/api/v2/boards HTTP/1.1
+apikey: {{$dotenv API_KEY}}
+
+### get workspaces
+GET https://remessaonline.kanbanize.com/api/v2/workspaces HTTP/1.1
+apikey: {{$dotenv API_KEY}}
